@@ -41,6 +41,7 @@
             this.btnProductClear = new System.Windows.Forms.Button();
             this.btnProductDelete = new System.Windows.Forms.Button();
             this.productsDGV = new System.Windows.Forms.DataGridView();
+            this.btnProductScreenBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productsDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,12 +216,26 @@
             this.productsDGV.TabIndex = 13;
             this.productsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsDGV_CellContentClick);
             // 
+            // btnProductScreenBack
+            // 
+            this.btnProductScreenBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnProductScreenBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductScreenBack.ForeColor = System.Drawing.Color.White;
+            this.btnProductScreenBack.Location = new System.Drawing.Point(712, 12);
+            this.btnProductScreenBack.Name = "btnProductScreenBack";
+            this.btnProductScreenBack.Size = new System.Drawing.Size(75, 23);
+            this.btnProductScreenBack.TabIndex = 14;
+            this.btnProductScreenBack.Text = "Zurück";
+            this.btnProductScreenBack.UseVisualStyleBackColor = false;
+            this.btnProductScreenBack.Click += new System.EventHandler(this.btnProductScreenBack_Click);
+            // 
             // ProductScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProNatur_BioMarkt_GmbH.Properties.Resources.ImgBgProducts;
             this.ClientSize = new System.Drawing.Size(799, 461);
+            this.Controls.Add(this.btnProductScreenBack);
             this.Controls.Add(this.productsDGV);
             this.Controls.Add(this.btnProductDelete);
             this.Controls.Add(this.btnProductClear);
@@ -239,6 +254,7 @@
             this.Name = "ProductScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produkte";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProductScreen_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.productsDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -260,5 +276,6 @@
         private System.Windows.Forms.Button btnProductClear;
         private System.Windows.Forms.Button btnProductDelete;
         private System.Windows.Forms.DataGridView productsDGV;
+        private System.Windows.Forms.Button btnProductScreenBack;
     }
 }

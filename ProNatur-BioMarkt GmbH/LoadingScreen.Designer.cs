@@ -70,6 +70,7 @@
             // 
             // loadingbarTimer
             // 
+            this.loadingbarTimer.Interval = 25;
             this.loadingbarTimer.Tick += new System.EventHandler(this.loadingbarTimer_Tick);
             // 
             // pictureBox1
@@ -96,6 +97,7 @@
             this.Name = "LoadingScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProNatur-Biomarkt GmbH";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoadingScreen_FormClosed);
             this.Load += new System.EventHandler(this.LoadingScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

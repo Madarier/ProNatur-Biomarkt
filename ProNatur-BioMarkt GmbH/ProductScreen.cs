@@ -132,5 +132,18 @@ namespace ProNatur_BioMarkt_GmbH
 
             lastSelectedProductKey = (int)productsDGV.SelectedRows[0].Cells[0].Value;
         }
+
+        private void btnProductScreenBack_Click(object sender, EventArgs e)
+        {
+            MainMenuScreen mainMenu = new MainMenuScreen();
+            mainMenu.Show();
+
+            this.Hide();
+        }
+
+        private void ProductScreen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
